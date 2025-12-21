@@ -25,7 +25,7 @@ X_test_scaled = scaler.transform(X_test)
 # 2. Khởi tạo danh sách các mô hình
 models = {
     "Linear Regression": LinearRegression(),
-    "Random Forest": RandomForestRegressor(n_estimators=100, random_state=42),
+    "Random Forest": RandomForestRegressor(n_estimators=300, random_state=42),
     "Gradient Boosting": GradientBoostingRegressor(random_state=42),
     "Lasso Regression": Lasso(alpha=0.1,max_iter=10000), # Alpha là tham số điều chuẩn
     "Ridge Regression": Ridge(alpha=1.0)

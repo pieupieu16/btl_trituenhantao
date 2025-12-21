@@ -22,19 +22,19 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Cảnh báo: Càng nhiều tham số, thời gian chạy càng lâu (cấp số nhân).
 param_grid = {
     # Số lượng cây (càng nhiều càng tốt nhưng chậm)
-    'n_estimators': [100, 200, 500],
+    'n_estimators': [100, 200, 300, 500 ,600, 650],## chay den 650 do chinh xac giam
 
     # Tốc độ học (thường đi kèm n_estimators, thấp thì cần nhiều cây)
     'learning_rate': [0.01, 0.1, 0.2],
 
     # Độ sâu tối đa của mỗi cây (kiểm soát độ phức tạp, tránh overfitting)
-    'max_depth': [3, 4, 5],
+    'max_depth': [1, 5, 10,20,25,30],
 
     # Số lượng mẫu tối thiểu để tách nút
-    'min_samples_split': [2, 5],
+    'min_samples_split': [2, 5,12],
 
     # Tỷ lệ mẫu dùng để huấn luyện từng cây (Stochastic Gradient Boosting)
-    'subsample': [0.8, 1.0]
+    'subsample': [0.7, 0.8 ,0.9]
 }
 
 print(f"Đang bắt đầu tìm kiếm lưới (Grid Search)...")

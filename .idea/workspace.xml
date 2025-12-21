@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="26b57d72-8982-463b-a908-2abf23fc5380" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/VN_housing_dataset.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tien_xu_li_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tien_xu_li_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datahouse.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datahouse.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final.py" beforeDir="false" afterPath="$PROJECT_DIR$/final.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processed_housing_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/processed_housing_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sosanh5model.py" beforeDir="false" afterPath="$PROJECT_DIR$/sosanh5model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/step1_đanh_gia_nguon_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/step1_đanh_gia_nguon_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree_core.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tree_core.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="36pHxan31mcjamthDGt35qBIyW3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/tranh/OneDrive/Desktop/studymchine/dự đoán giá nhà"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-b3d66beaba9a-c6efb3732140-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26199.168" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26b57d72-8982-463b-a908-2abf23fc5380" name="Changes" comment="" />
+      <created>1765696839453</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765696839453</updated>
+    </task>
+    <servers />
+  </component>
+</project>

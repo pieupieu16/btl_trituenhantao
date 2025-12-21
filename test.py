@@ -89,3 +89,4 @@ print(f"MSE: {mse:,.2f}")
 print(f"RMSE: {rmse:,.2f}")
 print(f"MAE: {mae:,.2f}")
 print(f"R2 Score: {r2:.4f}")
+

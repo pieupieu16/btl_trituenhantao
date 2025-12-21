@@ -26,17 +26,18 @@ df = clean_numeric_col(df, 'Dài', ' m')
 df = clean_numeric_col(df, 'Rộng', ' m')
 df['Số tầng'] = pd.to_numeric(df['Số tầng'], errors='coerce') # Ép kiểu số tầng
 
-
-
+# df=df[df['Giá nhà']>1000]
+# df['Giá nhà'] = df['Giá nhà'] / 1000
 
 # 4. FEATURE ENGINEERING (TẠO ĐẶC TRƯNG MỚI)
 
 
 # 5. XỬ LÝ GIÁ TRỊ THIẾU (IMPUTATION)
 # Với biến số: Điền bằng trung vị (median)
-numeric_cols = ['Diện tích', 'Số tầng', 'Số phòng ngủ', 'Dài', 'Rộng']
+numeric_cols = ['Diện tích', 'Số tầng', 'Số phòng ngủ', 'Dài']
 for col in numeric_cols:
     df[col] = df[col].fillna(df[col].median())
+df['Rộng'] = df['Rộng'].fillna(df['Diện tích']/df['Dài'])
 
 # Với biến phân loại: Điền bằng 'Unknown'
 categorical_cols = ['Quận', 'Huyện', 'Loại hình nhà ở', 'Giấy tờ pháp lý']
@@ -46,12 +47,24 @@ for col in categorical_cols:
 # 6. MÃ HÓA (ENCODING) & CHUẨN BỊ DỮ LIỆU CUỐI CÙNG
 # Xóa cột Địa chỉ vì quá chi tiết, khó dùng cho model đơn giản
 df_model = df.drop(columns=['Địa chỉ'])
+#xu li du lieu buoc cuoi cung
+df_final = pd.get_dummies(df_model, columns=categorical_cols, drop_first=True)
+def reverse_ohe(row, prefix):
+    cols = [c for c in df.columns if c.startswith(prefix)]
+    for c in cols:
+        if row[c] == 1:
+            return c.replace(prefix, '')
+    return 'Khác'
+# 3. Tạo cột phân loại để hiển thị (Visual)
+if 'Quận' not in df.columns:
+    df['Quận'] = df.apply(lambda x: reverse_ohe(x, 'Quận_'), axis=1)
+
+if 'Loại nhà' not in df.columns:
+    df['Loại nhà'] = df.apply(lambda x: reverse_ohe(x, 'Loại hình nhà ở_'), axis=1)
 
 # One-Hot Encoding cho các biến phân loại
-df_final = pd.get_dummies(df_model, columns=categorical_cols, drop_first=True)
-df_final.to_csv('processed_housing_data.csv', index=False)
-#xu li du lieu buoc cuoi cung
 
+df_final.to_csv('processed_housing_data.csv', index=False)
 
 
 # 7. KIỂM TRA KẾT QUẢ
